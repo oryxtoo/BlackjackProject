@@ -44,6 +44,7 @@ public class BlackjackHand extends Hand {
 			Card card = hand.get(i);
 			int value = card.getValue();
 			sum = sum + value;
+			
 		}
 		return sum;		
 	}
