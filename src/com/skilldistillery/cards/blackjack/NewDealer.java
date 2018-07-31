@@ -49,7 +49,7 @@ public class NewDealer {
 
 				while (response.equalsIgnoreCase("H") && !playerHand.playerBust()) {
 //--------------------BUG-----------------------------------------------------------------					
-					
+					//fixed bug here
 					playerHand.addCard(deck.dealCard());
 					int lastCardDealtIndex = playerHand.getCards().size()-1;
 					System.out.println(playerHand.getCard(lastCardDealtIndex).getRank() + " of " + playerHand.getCard(lastCardDealtIndex).getSuit() + " is dealt to the Player.");
