@@ -48,8 +48,14 @@ public class NewDealer {
 				response = sc.next();
 
 				while (response.equalsIgnoreCase("H") && !playerHand.playerBust()) {
+//--------------------BUG-----------------------------------------------------------------					
+					
 					playerHand.addCard(deck.dealCard());
-					System.out.println(playerHand.getCard(0).getRank() + " of " + playerHand.getCard(0).getSuit() + " is dealt to the Player.");
+					int lastCardDealtIndex = playerHand.getCards().size()-1;
+					System.out.println(playerHand.getCard(lastCardDealtIndex).getRank() + " of " + playerHand.getCard(lastCardDealtIndex).getSuit() + " is dealt to the Player.");
+
+//---------------------------------------------------------------------------------------
+					
 					System.out.println("Player has " + playerHand.getHandValue());
 					System.out.println("Dealer is showing " + dealerHand.getCard(0).getValue());
 					if (playerHand.playerBust()) {
